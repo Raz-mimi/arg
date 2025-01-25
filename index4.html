@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARG</title>
+    <style>
+        /* Background styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.imgur.com/bBmypjT.jpeg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .content {
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
+            padding: 40px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2; /* Ensures content is above background */
+        }
+
+        .content h1 {
+            font-size: 50px; /* Adjust heading size */
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 24px; /* Adjust paragraph text size */
+            margin-bottom: 30px;
+        }
+
+        #hiddenLink {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            color: rgb(25, 11, 27);
+        }
+
+        input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(90, 0, 0);
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0c2d31; /* Button color change on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>you acutally found this?</h1>
+        <p>color me shocked. but did u find the password?.</p>
+
+        <!-- Password Input Field -->
+        <input type="password" id="passwordInput" placeholder="whats the password?">
+        <button onclick="checkPassword()">Submit</button>
+
+        <!-- Hidden Link -->
+        <div id="hiddenLink">
+            <a href="file:///C:/Users/Iamam/index.html" target="_blank">???</a>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var correctPassword = "nyx";  // Set your desired password here
+            var userInput = document.getElementById("passwordInput").value;
+
+            if (userInput === correctPassword) {
+                document.getElementById("hiddenLink").style.display = "block";
+            } else {
+                alert("wrong. stop trying.");
+            }
+        }
+    </script>
+
+</body>
+</html>
